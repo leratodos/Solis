@@ -1,0 +1,210 @@
+@use 'vars';
+
+@media screen and (max-width: 947px) {
+    .quote {
+        .container {
+            .quote_text_wrapper {
+                padding: 20px;
+            }
+        }
+       
+    }
+
+    .info {
+        .statistic_list {
+            .statistic_item {
+                font-size: 40px;
+            }
+        }
+    } 
+
+    .video {
+        .container {
+             .main_text, .description_text {
+                margin: 0 auto;
+             }
+        }
+    }
+}
+
+
+
+
+/*320 mobile*/
+
+@media screen and (max-width: 767px) {
+    .header {
+        .nav {
+            .hamburger {
+                display: inline-block;
+                color: #fff;
+            }
+        }
+
+       
+        .nav_list {
+            position: absolute;
+            background-color: #161926;
+            right: 0;
+            top: -30px;
+            height: 100vh;
+            width: 75%;
+            max-width: 600px;
+            z-index: 1;
+            transition: all .5s ease;
+            transform: translateX(100%);
+
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                padding-top: 120px;
+                align-items: center;
+                width: 100%;
+               
+            }
+
+            .nav_list_item {
+                width: 80%;
+                text-align: center;
+                padding: 15px 10px;
+                outline: rgba(255,255,255,.3) solid 2px;
+                &:hover {
+                    transform: scale(1);
+                    color: vars.$color-green-neon;
+                   
+                    &:after {
+                        display: none;
+                    } 
+                }
+            }
+        }
+
+        .open {
+            display: flex;
+            transform: translateX(0);
+            transition: all .5s ease;
+        }
+    }
+    .info {
+        padding-bottom: 20px;
+        .image {
+            max-width: 100%;
+        }
+
+        .statistic_wrapper {
+            position: static;
+            display: block;
+            padding: 0;
+            // right: 0;
+            // left: 0;
+            // top: 0;
+            // bottom: 0;
+            
+            .statistic_list { 
+            
+               padding: 0;
+
+               .description_text {
+                display: inline-block;
+            }
+            }
+
+            .amount_text {
+                font-size: 30px;
+                padding-top: 30px;
+
+                span {
+                    font-size: 30px;
+                }
+            }
+
+           
+
+
+            .statistic_item:not(:last-child) {
+                &:after {
+                    content: '';
+                    display: none;
+                }
+            }
+
+            .statistic_text {
+                max-width: 100%;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+
+              
+            }
+
+            
+
+        }
+       
+    } 
+
+    .benefits {
+        .benefits_wrapper {
+            display: block;
+
+            .benefits_item {
+                display: block;
+            }
+        }
+        
+    }
+
+    .reviews {
+
+        .client_reviews {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        
+            .review_item {
+                max-width: 100%;
+                
+                .item_text { 
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .contact { 
+        .contact_wrapper {
+            display: block;
+        }
+
+        .form, .text {
+            width: 100%;
+        }
+    }
+
+    .promises {
+        .promises_wrapper {
+            position: static;
+            display: block;
+            padding: 0;
+        }
+    }
+
+    .footer {
+        .footer_wrapper {
+            display: block;
+
+            p {
+                text-align: center;
+            }
+
+            .links {
+                padding-top: 15px;
+                gap: 10px;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}

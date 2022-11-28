@@ -1,0 +1,41 @@
+/*vars*/
+.header .nav_list_item {
+  position: relative;
+}
+.header .nav_list_item:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+.header .nav_list_item:hover:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  background: linear-gradient(96.73deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
+  opacity: 0.3;
+  width: 40px;
+  height: 1px;
+}
+
+.main .play_button:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.main .play_button:active {
+  transform: translateY(4px);
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+.main .button_decorated:hover {
+  color: #53F3CD;
+}
+.main .button_decorated:hover:after {
+  background-color: #53F3CD;
+}
+
+.promises .button:hover {
+  border: 1px solid #53F3CD;
+}

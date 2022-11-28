@@ -1,0 +1,65 @@
+@use 'vars';
+
+.header {
+
+
+    .nav_list_item {
+        position: relative;
+       
+
+        &:hover {
+            transform: scale(1.2);
+            transition: all .3s ease;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: inline-block;
+                background: linear-gradient(96.73deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
+                opacity: 0.3;           
+                width: 40px;
+                height: 1px;
+             
+            }
+        }
+    }
+}
+
+.main {
+
+    .play_button {
+
+        &:hover {
+            transform: scale(1.1);
+            transition: all .2s ease;
+            background-color: rgba(255, 255, 255, .3);
+        }
+
+        &:active {
+            transform: translateY(4px);
+            background-color: rgba(255, 255, 255, 0.6);
+            transition: all .3s ease;
+        }    
+    }
+    
+    .button_decorated {
+        &:hover {
+            color: vars.$color-green-neon;
+          &:after {
+            background-color: vars.$color-green-neon;
+          }
+        }
+    }
+
+}
+
+.promises { 
+    .button {
+        &:hover {
+            border: 1px solid vars.$color-green-neon;;
+        }
+    }
+}
